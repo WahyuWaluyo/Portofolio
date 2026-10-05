@@ -45,7 +45,7 @@ function update() {
   obstacles.forEach(o => (o.x -= speed));
   obstacles = obstacles.filter(o => o.x + o.w > 0);
 
-  if (frame % 60 === 0) { score++; speed += 0.08; }
+  if (frame % 60 === 0) { score++; speed += 0.03; }
 
   for (const o of obstacles) {
     if (player.x < o.x + o.w && player.x + player.w > o.x &&
